@@ -6,7 +6,7 @@ class MP3Importer
   end
   
   def files
-    @mp3s = Dir.glob("#{path}/*.mp3").collect{|file| file.gsub("#{path}/", "")}
+    @mp3s = Dir.glob("spec/fixtures/mp3s/*.mp3").collect{|file| file.gsub("#{path}/", "")}
   end
   #@mp3s only necessary if calling the saved array later. Otherwise return value will be enough for #import
   def import
